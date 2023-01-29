@@ -11,6 +11,8 @@ int columns = int.Parse(Console.ReadLine() ?? "");
 int[,] array = GetArray(rows, columns);
 PrintArray(array);
 
+//////////////////////////////////////////////////
+
 int[,] GetArray(int m, int n)
 {
     int[,] result = new int[m, n];
