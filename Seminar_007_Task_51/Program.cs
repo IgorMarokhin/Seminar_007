@@ -32,12 +32,13 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
 int SumDiagonal(int [,] inArray)
 {
     int sum = 0;
-    int size = 0;
-    if (inArray.GetLength(0) < inArray.GetLength(1))
-        size = inArray.GetLength(0);
-    else 
-        size = inArray.GetLength(1);
-    for (int i = 0; i < size; i++)
+    int resolutionMin = Math.Min(inArray.GetLength(0), inArray.GetLength(1));
+    // int size = 0;
+    // if (inArray.GetLength(0) < inArray.GetLength(1))
+    //     size = inArray.GetLength(0);
+    // else 
+    //     size = inArray.GetLength(1);
+    for (int i = 0; i < resolutionMin; i++)
     {
         sum += inArray[i, i];
     }
